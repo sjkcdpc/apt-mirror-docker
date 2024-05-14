@@ -5,8 +5,8 @@ set var_path          $base_path/var
 set postmirror_script $var_path/postmirror.sh
 set defaultarch       amd64
 set run_postmirror    0
-set nthreads          6
-set limit_rate        100m
+set nthreads          30
+set limit_rate        500m
 set _tilde            0
 # Use --unlink with wget (for use with hardlinked directories)
 set unlink            1
