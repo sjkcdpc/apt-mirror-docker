@@ -15,6 +15,6 @@ services:
         restart: always
         command: [nginx-debug, '-g', 'daemon off;']
         volumes:
-            - "./mirror/mirror:/mirror:ro"
+            - "./mirror:/mirror:ro"
         ports:
             - "8080:80"
