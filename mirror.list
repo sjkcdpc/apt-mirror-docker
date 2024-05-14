@@ -1,12 +1,21 @@
+# 配置数据基目录
 set base_path         /var/spool/apt-mirror
+# 配置镜像存储位置
 set mirror_path       $base_path/mirror
+# 配置临时下载索引位置
 set skel_path         $base_path/skel
+# 配置日志,URLs和MD5校验信息存储位置
 set var_path          $base_path/var
+# 设定下载后运行的脚本位置
 set postmirror_script $var_path/postmirror.sh
+# 设置默认架构
 set defaultarch       amd64
+# 设置是否执行 下载后的脚本操作，默认是1(但是默认没有postmirror.sh脚本）
 set run_postmirror    0
+# 设置下载线程数
 set nthreads          30
 set limit_rate        500m
+# 是否替换URL中的波浪线，替换成%7E（HTML代码），否则会跳过不进行下载
 set _tilde            0
 # Use --unlink with wget (for use with hardlinked directories)
 set unlink            1
@@ -15,20 +24,31 @@ set http_proxy        127.0.0.1:3128
 set proxy_user        user
 set proxy_password    password
 
-deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy main restricted universe multiverse
-deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy main restricted universe multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy main restricted
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy main restricted
 
-deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security main restricted universe multiverse
-deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security main restricted universe multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates main restricted
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates main restricted
 
-deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates main restricted universe multiverse
-deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates main restricted universe multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy universe
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy universe
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates universe
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates universe
 
-# deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-proposed main restricted universe multiverse
-# deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-proposed main restricted universe multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates multiverse
 
 deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-backports main restricted universe multiverse
 deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-backports main restricted universe multiverse
+
+deb http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security main restricted
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security main restricted
+deb http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security universe
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security universe
+deb http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security multiverse
 
 clean http://mirrors.cloud.aliyuncs.com/ubuntu
 
