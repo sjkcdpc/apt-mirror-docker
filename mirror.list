@@ -50,7 +50,7 @@ deb-src http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security universe
 deb http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security multiverse
 deb-src http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security multiverse
 
-clean http://mirrors.cloud.aliyuncs.com/ubuntu
+# clean http://mirrors.cloud.aliyuncs.com/ubuntu
 
 # ==
 # Example of other repos
