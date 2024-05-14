@@ -13,8 +13,8 @@ set defaultarch       amd64
 # 设置是否执行 下载后的脚本操作，默认是1(但是默认没有postmirror.sh脚本）
 set run_postmirror    0
 # 设置下载线程数
-set nthreads          30
-set limit_rate        500m
+set nthreads          100
+set limit_rate        500000m
 # 是否替换URL中的波浪线，替换成%7E（HTML代码），否则会跳过不进行下载
 set _tilde            0
 # Use --unlink with wget (for use with hardlinked directories)
