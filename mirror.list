@@ -15,11 +15,22 @@ set http_proxy        127.0.0.1:3128
 set proxy_user        user
 set proxy_password    password
 
-deb http://archive.ubuntu.com/ubuntu bionic main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu bionic-security main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu bionic-updates main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu bionic-backports main restricted universe multiverse
-clean http://archive.ubuntu.com/ubuntu
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy main restricted universe multiverse
+
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security main restricted universe multiverse
+
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates main restricted universe multiverse
+
+# deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-proposed main restricted universe multiverse
+# deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-proposed main restricted universe multiverse
+
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-backports main restricted universe multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-backports main restricted universe multiverse
+
+clean http://mirrors.cloud.aliyuncs.com/ubuntu
 
 # ==
 # Example of other repos
