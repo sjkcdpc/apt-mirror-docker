@@ -43,14 +43,14 @@ deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-updates multiverse
 deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-backports main restricted universe multiverse
 deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-backports main restricted universe multiverse
 
-deb http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security main restricted
-deb-src http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security main restricted
-deb http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security universe
-deb-src http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security universe
-deb http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security multiverse
-deb-src http://mirrors.cloud.aliyuncs.com/ubuntu jammy-security multiverse
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security main restricted
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security main restricted
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security universe
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security universe
+deb http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security multiverse
+deb-src http://mirrors.cloud.aliyuncs.com/ubuntu/ jammy-security multiverse
 
-# clean http://mirrors.cloud.aliyuncs.com/ubuntu
+clean http://mirrors.cloud.aliyuncs.com/ubuntu
 
 # ==
 # Example of other repos
