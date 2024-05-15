@@ -26,9 +26,14 @@ That is to say your download time shoudln't exceed 6 hours to be safe : that's w
     ```bash
     docker-compose build
     docker-compose up mirror
+   
+    # crontab -e  设置同步任务
+    0 6,13,19 * * * cd /data/apt-mirror-docker/ && docker-compose up mirror
     ```
 
 > This repository is shipped with the Ubuntu 18.04 default `mirror.list` (expect ~210Gb to be downloaded)
+
+> This repository is shipped with the Ubuntu 22.04 default `mirror.list` (expect ~490Gb to be downloaded)
 
 ## Serving
 
