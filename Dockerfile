@@ -6,6 +6,8 @@ ENV TZ="Asia/Shanghai"
 
 WORKDIR /apt-mirror
 
+RUN rm -rf /etc/localtime
+
 RUN ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN apt update
